@@ -670,6 +670,74 @@
 /*** Single Page Hero Header End ***/
 
 
+
+/*** Banner Start ***/
+.banner12 {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.326), rgba(0, 0, 0, 0.377)), url(../img/business2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 9;
+}
+
+.banner12 .container {
+    position: relative;
+    z-index: 99;
+}
+
+.banner12::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 500px;
+    top: -200px;
+    left: 0;
+    background: var(--bs-primary);
+    transform: rotate(45deg);
+    z-index: 1;
+}
+
+.banner12::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 500px;
+    bottom: -200px;
+    right: 0;
+    background: var(--bs-primary);
+    transform: rotate(45deg);
+    z-index: 1;
+}
+
+.banner12 .banner-design-1 {
+    position: absolute;
+    width: 30px;
+    height: 500px;
+    top: -165px;
+    left: 0;
+    background: var(--bs-dark);
+    transform: rotate(45deg);
+    z-index: 2;
+}
+
+.banner12 .banner-design-2 {
+    position: absolute;
+    width: 30px;
+    height: 500px;
+    bottom: -165px;
+    right: 0;
+    background: var(--bs-dark);
+    transform: rotate(45deg);
+    z-index: 2;
+}
+/*** Banner End ***/
+
+
+
+
+
 /*** Banner Start ***/
 .banner {
     position: relative;
@@ -732,6 +800,148 @@
     z-index: 2;
 }
 /*** Banner End ***/
+
+
+.banner1 {
+    margin-top: 50px; /* Adjust as needed */
+    padding-top: 30px; /* Adds space inside the section */
+    
+}
+
+
+.single-banner {
+    position: relative;
+    border-radius: 7px;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background:rgba(0, 0, 0, 0.6) ;
+}
+
+.single-banner img {
+    width: 100%;
+    height: auto;
+    border-radius: 7px;
+    display: block;
+    object-fit: cover;
+   
+}
+
+.single-banner .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+
+/* Hover Effect */
+.banner-link .single-banner:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    background-color: #00000056;
+}
+
+/*==================================
+   Responsive Fixes for Smaller Devices
+==================================*/
+
+/* Tablets (max-width: 991px) */
+@media (max-width: 991px) {
+    .single-banner .content {
+        padding: 15px;
+        font-size: 14px;
+    }
+    
+    .single-banner .content h2 {
+        font-size: 42px;
+    }
+
+    .single-banner .content p {
+        font-size: 12px;
+    }
+
+    .single-banner .button .btn {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+}
+
+/* Mobile Devices (max-width: 767px) */
+@media (max-width: 767px) {
+    .single-banner {
+        margin-bottom: 20px; /* Add space between banners */
+    }
+
+    .single-banner img {
+        height: 200px; /* Adjust banner height for small screens */
+    }
+
+    .single-banner .content {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .single-banner .content h2 {
+        font-size: 36px;
+    }
+
+    .single-banner .content p {
+        font-size: 11px;
+    }
+
+    .single-banner .button .btn {
+        padding: 6px 12px;
+        font-size: 10px;
+    }
+}
+
+/* Very Small Screens (max-width: 480px) */
+@media (max-width: 480px) {
+    .single-banner img {
+        height: 150px; /* Reduce banner height for tiny screens */
+    }
+
+    .single-banner .content h2 {
+        font-size: 30px;
+    }
+
+    .single-banner .content p {
+        font-size: 10px;
+    }
+
+    .single-banner .button .btn {
+        padding: 5px 10px;
+        font-size: 9px;
+    }
+}
+
+
+
+.slide-section {
+    display: none;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.slide-section.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-section.hide {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+  
 
 /*** Service Start ***/
 .service .nav .nav-item {
