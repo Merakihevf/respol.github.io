@@ -180,6 +180,8 @@
     border-color: #020202 !important;
 }
 
+
+
 .header-top .topbar .dropdown-toggle::after {
     border: none;
     content: "\f107";
@@ -202,7 +204,7 @@
 
 .header-top {
     height: 125px;
-    position: relative;
+    position: sticky;
 }
 
 .header-top::after {
@@ -599,6 +601,11 @@
     transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
+.fas.fa-envelope  {
+    color: #1260ba; /* Bright yellow (adjust as needed) */
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
 .fas.fa-shield-alt {
     color: #1260ba; /* Bright yellow (adjust as needed) */
     transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
@@ -621,6 +628,11 @@
 }
 
 .d-flex:hover .fas.fa-broadcast-tower {
+    color: #0077ff; /* Darker yellow/orange on hover */
+    transform: scale(1.2); /* Slightly enlarge the icon */
+}
+
+.d-flex:hover .fas.fas.fa-envelope {
     color: #0077ff; /* Darker yellow/orange on hover */
     transform: scale(1.2); /* Slightly enlarge the icon */
 }
@@ -1166,6 +1178,23 @@
 .team .team-item:hover .team-img img {
     transform: scale(1.1);
 }
+
+.team .team-item .team-img {
+    position: relative;
+    overflow: hidden;
+    width: 250px;  /* Adjust size */
+    height: 250px; /* Adjust size */
+    border-radius: 50%; /* Makes it circular */
+    margin: 0 auto; /* Center align */
+}
+
+.team .team-item .team-img img {
+    width: 100%; /* Ensures it fits */
+    height: 100%;
+    object-fit: cover; /* Keeps aspect ratio */
+    border-radius: 50%; /* Ensures circular shape */
+}
+
 
 .team .team-item .team-img .team-icon {
     position: absolute;
