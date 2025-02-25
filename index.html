@@ -1217,53 +1217,7 @@
         <script src="lib/owlcarousel/owl.carousel.min.js"></script>
         
 
-        <!-- Template Javascript -->
-        <script src="js/main.js"></script>
 
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                console.log("DOM fully loaded");
-            
-                // Get URL parameters
-                const urlParams = new URLSearchParams(window.location.search);
-                const section = urlParams.get("section");
-            
-                console.log("Section Parameter:", section);
-            
-                // Get section elements
-                const businessSection = document.getElementById("business-sections");
-                const energySection = document.getElementById("energy-sections");
-            
-                // Debug: Check if elements exist
-                if (!businessSection) {
-                    console.error("❌ business-sections NOT found in DOM");
-                }
-                if (!energySection) {
-                    console.error("❌ energy-sections NOT found in DOM");
-                }
-            
-                // Hide both sections initially (if they exist)
-                if (businessSection) businessSection.style.display = "none";
-                if (energySection) energySection.style.display = "none";
-            
-                // Show the correct section based on the URL
-                if (section === "business" && businessSection) {
-                    console.log("✅ Displaying Business Section");
-                    businessSection.style.display = "block";
-                    businessSection.style.visibility = "visible";
-                    businessSection.style.opacity = "1";
-                    businessSection.style.height = "auto"; // Ensure it's not collapsed
-                } else if (section === "energy" && energySection) {
-                    console.log("✅ Displaying Energy Section");
-                    energySection.style.display = "block";
-                    energySection.style.visibility = "visible";
-                    energySection.style.opacity = "1";
-                    energySection.style.height = "auto";
-                } else {
-                    console.log("❌ No matching section found, nothing displayed");
-                }
-            });
-        </script>
 
         
             
